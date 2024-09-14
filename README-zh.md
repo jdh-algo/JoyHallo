@@ -2,7 +2,7 @@
 
 <br>
 <div align='left'>
-    <a href='https://fudan-generative-vision.github.io/hallo/#/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
+    <a href='https://fudan-generative-vision.github.io/hallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href='https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
 </div>
 <br>
@@ -229,7 +229,7 @@ python -m scripts.data_preprocess --input_dir joyhallo/videos --step 2
   title={JoyHallo: Digital human model for Mandarin},
   author={Sheng Shi and Xuyang Cao and Jun Zhao and Guoxin Wang},
   year={2024},
-  url={https://huggingface.co/spaces/jdh-algo/JoyHallo-v1}
+  url={https://github.com/jdh-algo/JoyHallo}
 }
 ```
 
