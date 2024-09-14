@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>JoyHallo</title>
+  <link rel="icon" type="image/x-icon" href="./static/images/JoyType.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>
+#nav-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#project-nav-container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.home-link {
+  margin-right: 10px;
+}
+
+.house-icon {
+  fill: #333;
+  transition: fill 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.house-icon:hover {
+  fill: #0366d6;
+}
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #333;
+}
+.select-wrapper {
+  position: relative;
+  margin-left: 10px;
+}
+.video-carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper {
+  flex: 0 0 33.33%;
+  padding: 0 10px;
+}
+.video-wrapper2 {
+  flex: 0 0 33.33%;
+  padding: 0 10px;
+}
+video {
+  width: 100%;
+}
+
+button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+#project-nav {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 5px 30px 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 800px; /* 根据需要调整 */
+  margin: 0 auto;
+}
+
+.video-container {
+  width: 100%;
+  overflow: hidden;
+  /* 其他视频容器样式 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* 调整按钮与视频之间的距离 */
+}
+.home-link {
+  margin-top: 10px; /* 向下移动 */
+  margin-left: 60px; /* 向右移动 */
+}
+
+.prev-btn, .next-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #e0e0e0;
+}
+/* .carousel-container {
+  width: 135%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+} */
+.carousel-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 0; /* 添加上下内边距 */
+  box-sizing: border-box;
+  text-align: center; /* 使内部内联元素居中 */
+}
+.video-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.video-container2 {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.video-wrapper {
+  flex: 0 0 33.333%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.video-wrapper2 {
+  flex: 0 0 33.333%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.prev-btn, .next-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.video-wrapper {
+    display: none;
+  }
+  .video-wrapper2{
+    display: none;
+  }
+  .video-wrapper.active {
+    display: inline-block;
+  }
+  .video-wrapper2.active {
+    display: inline-block;
+  }
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .video-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.prev-btn:hover, .next-btn:hover {
+  background-color: #e0e0e0;
+}
+.video-container {
+  display: flex;
+  justify-content: center; /* 或 flex-start, flex-end 等，根据需要调整 */
+  align-items: center;
+}
+.video-container2 {
+  display: flex;
+  justify-content: center; /* 或 flex-start, flex-end 等，根据需要调整 */
+  align-items: center;
+}
+
+.demo-video {
+  width: 8%;
+  min-width: 1100px;
+  max-width: 1400px;
+}
+.video-wrapper2 {
+    display: none;
+  }
+
+
+  .video-wrapper2 {
+    display: none;
+  }
+  .video-wrapper2.active {
+    display: inline-block;
+  }
+  .video-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  </style>
+</head>
+
+<body>
+
+  <div id="nav-wrapper">
+    <div id="project-nav-container">
+      <a href="https://github.com/jdh-algo" title="GitHub主页" class="home-link">
+        <svg class="house-icon" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </a>
+      <div class="select-wrapper">
+        <select id="project-nav" onchange="location = this.value;">
+          <option value="">More Research</option>
+          <option value="D:\joyhallo_demo\index.html">JoyHallo</option>
+          <option value="https://jdh-algo.github.io/JoyType/">JoyType</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">JoyHallo: Digital human model for Mandarin</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a target="_blank">Shi Sheng</a><sup></sup>,</span>
+              <span class="author-block">
+                <a target="_blank">Cao Xuyang</a><sup></sup>,</span>
+              <span class="author-block">
+                <a target="_blank">Zhao Jun</a><sup></sup>,</span>
+              <span class="author-block">
+                <a target="_blank">Wang Guoxin</a><sup></sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">JD Health International Inc.</span>
+              <!-- <span class="eql-cntrb"><small><br><sup>1</sup>zhaojun10@jd.com</small></span> -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv(Coming)</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/jdh-algo/JoyHallo" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- huggingface demo Link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="./static/images/hf-logo.png">
+                    </span>
+                    <span>HuggingFace</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper abstract -->
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <video class="demo-video" controls>
+          <source src="./static/videos/demo4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In the field of speech-driven video generation, creating Mandarin 
+              videos presents significant challenges. Collecting comprehensive 
+              Mandarin datasets is difficult, and Mandarin's complex lip shapes 
+              further complicate model training compared to English. Our research
+               involved collecting 29 hours of Mandarin speech video from 
+               employees at JD Health International Inc., resulting in the 
+               jdh-Hallo dataset. This dataset features a wide range of ages 
+               and speaking styles, including both conversational and specialized
+                medical topics. To adapt the JoyHallo model for Mandarin, we 
+                utilized the Chinese-wav2vec 2.0 model for audio feature 
+                embedding. Additionally, we enhanced the Hierarchical
+                 Audio-Driven Visual Synthesis module by integrating a
+                  Cross Attention mechanism, which aggregates information from
+                   lip, expression, and pose features. This integration not only
+                    improves information utilization efficiency but also 
+                    accelerates inference speed by 14.3%. The moderate coupling
+                     of information enables the model to learn relationships 
+                     between facial features, addressing issues of unnatural 
+                     appearance. These advancements lead to more precise 
+                     alignment between audio inputs and visual outputs, 
+                     enhancing the quality and realism of synthesized videos. 
+                     It is noteworthy that JoyHallo maintains its strong ability
+                      to generate English videos, demonstrating excellent 
+                      cross-language generation capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Paper Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">Framework</h2>
+          <div class="content has-text-justified">
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
+        <img src="./static/images/pipeline.png" style="width: 80%;">
+        <!-- <h6 class="title is-6" style="text-align: center;">Figure 1. Pipeline of training and inferencing</h6> -->
+        <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Paper Experiment -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">Videos</h2>
+          <br>
+          <!-- <h4 class="title is-4" style="text-align: left;">Mandarin</h4> -->
+          <div class="content has-text-justified">
+            <h4 class="title is-4" style="text-align: center;">Mandarin Speech</h4>
+            <div class="content has-text-justified">
+              <div class="carousel-container">
+                <div class="video-container">
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/1_0.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/6_0.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/7_1.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/4_0.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/3_0.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/5_1.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+         
+              </div>
+ 
+          </div>
+
+          <div class="content has-text-justified">
+            <h4 class="title is-4" style="text-align: center;">Mandarin Song</h4>
+            <div class="content has-text-justified">
+              <div class="carousel-container">
+                <div class="video-container">
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo/4_6.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo-en/0_s7_7.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="video-wrapper active">
+                    <video controls>
+                      <source src="./static/joyhallo-en/0_s6_7.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              
+
+
+              
+      <div class="content has-text-justified">
+        <h4 class="title is-4" style="text-align: center;">English Speech</h4>
+        <div class="content has-text-justified">
+
+          <div class="carousel-container">
+            <div class="video-container">
+
+
+              <div class="video-wrapper active">
+                <video controls>
+                  <source src="./static/joyhallo-en/5_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper active">
+                <video controls>
+                  <source src="./static/joyhallo-en/7_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper active">
+                <video controls>
+                  <source src="./static/joyhallo-en/s7_2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+     
+          </div>
+          </div>
+          <div class="content has-text-justified">
+          <h4 class="title is-4" style="text-align: center;">English Song</h4>
+          <div class="content has-text-justified">
+
+            <div class="carousel-container">
+              <div class="video-container2">
+            
+                <div class="video-wrapper2 active">
+                  <video controls>
+                    <source src="./static/joyhallo-en/1_5.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="video-wrapper2 active">
+                  <video controls>
+                    <source src="./static/joyhallo-en/6_5.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="video-wrapper2 active">
+                  <video controls>
+                    <source src="./static/joyhallo-en/4_4.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="video-wrapper2 ">
+                  <video controls>
+                    <source src="./static/joyhallo-en/3_5.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="button-container">
+                <button class="prev-btn">←</button>
+                <button class="next-btn">→</button>
+              </div>
+            </div>
+            
+        </div>
+          
+      </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- <br> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Improved aesthetics quality</h2>
+        <h3 class="title is-4" style="text-align: center;">User study results</h3> -->
+        <!-- <h6 class="title is-6" style="text-align: center;">Table 2. Performance on less recognizable artistic fonts</h6>
+        <img src="./static/images/experiments/exps-1.svg" style="width: 100%;"> -->
+        <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
+      </div>
+    </div>
+
+   
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <h2 class="title is-2">Comparison</h2>
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
+        <h6 class="title is-6" style="text-align: center;">Table 1. Accuracy comparison in Mandarin</h6>
+        <img src="./static/images/experiments/cop1.png" style="width: 100%;">
+        <div class="content has-text-justified">
+        </div>
+        <h6 class="title is-6" style="text-align: center;">Table 2. Inference efficiency comparison</h6>
+        <img src="./static/images/experiments/cop2.png" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+
+  </section>
+ 
+
+
+
+
+  <!-- BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{JoyHallo2024,
+  title={JoyHallo: Digital human model for Mandarin},
+  author={Sheng Shi and Xuyang Cao and Jun Zhao and Guoxin Wang},
+  year={2024},
+  url={https://huggingface.co/spaces/jdh-algo/JoyHallo-v1}
+}</code></pre>
+  
+    </div>
+  </section> 
+  <!--End BibTex citation
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+
+<script>
+ const videoWrappers = document.querySelectorAll('.video-wrapper2');
+  let currentIndex = 0;
+  const videosToShow = 3;
+
+  function updateVideos() {
+    videoWrappers.forEach((video, index) => {
+      video.classList.remove('active');
+      if (index >= currentIndex && index < currentIndex + videosToShow) {
+        video.classList.add('active');
+      }
+    });
+  }
+
+  document.querySelector('.prev-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : videoWrappers.length - videosToShow;
+    updateVideos();
+  });
+
+  document.querySelector('.next-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex < videoWrappers.length - videosToShow) ? currentIndex + 1 : 0;
+    updateVideos();
+  });
+
+  updateVideos();
+
+
+</script>
+
+</body>
+
+</html>
