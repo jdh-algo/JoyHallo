@@ -3,7 +3,7 @@
 <br>
 <div align='left'>
     <a href='https://jdh-algo.github.io/JoyHallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
-    <a href='https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
+    <a href='https://huggingface.co/jdh-algo/JoyHallo-v1'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
 </div>
 <br>
 
@@ -76,7 +76,7 @@ For convenience, we have uploaded the model weights to both **Huggingface** and 
 
 |  Model  |  Dataset  |                              Huggingface                              |                                       JD Cloud                                       |
 | :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
+| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
 
 ### 4. pretrained_models contents
 

@@ -3,7 +3,7 @@
 <br>
 <div align='left'>
     <a href='https://fudan-generative-vision.github.io/hallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
-    <a href='https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
+    <a href='https://huggingface.co/jdh-algo/JoyHallo-v1'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
 </div>
 <br>
 
@@ -76,7 +76,7 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 |   模型   |   数据   |                              Huggingface                              |                                        京东云                                        |
 | :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
+| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
 
 ### 4. pretrained_models 目录
 
