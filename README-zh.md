@@ -74,10 +74,9 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 为了方便下载，我们分别在 **Huggingface** 和 **京东云** 上传了模型权重。
 
-|   模型   |   数据   |                              Huggingface                              |                                        京东云                                        |        描述        |
-| :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: | :----------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) | 适用于JoyHallo模型 |
-| ch-Hallo | jdh-hallo | [ch-Hallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [ch-Hallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/ch-hallo/net.pth) |  适用于Hallo模型  |
+|   模型   |   数据   |                              Huggingface                              |                                        京东云                                        |
+| :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
+| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
 
 ### 4. pretrained_models 目录
 
@@ -90,8 +89,6 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 |   |-- mdx_model_data.json
 |   |-- vr_model_data.json
 |   `-- Kim_Vocal_2.onnx
-|-- ch-hallo/
-|   `-- net.pth
 |-- face_analysis/
 |   `-- models/
 |       |-- face_landmarker_v2_with_blendshapes.task

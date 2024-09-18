@@ -74,10 +74,9 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 For convenience, we have uploaded the model weights to both **Huggingface** and **JD Cloud**.
 
-|  Model  |  Dataset  |                              Huggingface                              |                                       JD Cloud                                       |         Description         |
-| :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: | :-------------------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) | Suitable for JoyHallo model |
-| ch-Hallo | jdh-hallo | [ch-Hallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [ch-Hallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/ch-hallo/net.pth) |  Suitable for Hallo model  |
+|  Model  |  Dataset  |                              Huggingface                              |                                       JD Cloud                                       |
+| :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
+| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
 
 ### 4. pretrained_models contents
 
@@ -90,8 +89,6 @@ The final `pretrained_models` directory should look like this:
 |   |-- mdx_model_data.json
 |   |-- vr_model_data.json
 |   `-- Kim_Vocal_2.onnx
-|-- ch-hallo/
-|   `-- net.pth
 |-- face_analysis/
 |   `-- models/
 |       |-- face_landmarker_v2_with_blendshapes.task
