@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>JoyHallo</title>
+  <title>JoyType</title>
   <link rel="icon" type="image/x-icon" href="./static/images/JoyType.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -44,6 +44,7 @@
   <script src="static/js/index.js"></script>
 
   <style>
+
 #nav-wrapper {
   display: flex;
   justify-content: center;
@@ -54,7 +55,7 @@
 #project-nav-container {
   display: flex;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .home-link {
@@ -81,42 +82,26 @@
   font-size: 12px;
   color: #333;
 }
+
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #333;
+}
 .select-wrapper {
   position: relative;
   margin-left: 10px;
 }
-.video-carousel {
+#project-nav-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  overflow: hidden;
+  padding-top: 10px;
 }
-
-.video-container {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-
-.video-wrapper {
-  flex: 0 0 33.33%;
-  padding: 0 10px;
-}
-.video-wrapper2 {
-  flex: 0 0 33.33%;
-  padding: 0 10px;
-}
-video {
-  width: 100%;
-}
-
-button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-
 #project-nav {
   appearance: none;
   -webkit-appearance: none;
@@ -128,151 +113,17 @@ button {
   cursor: pointer;
   outline: none;
 }
-
-.carousel-wrapper {
-  width: 100%;
-  max-width: 800px; /* 根据需要调整 */
-  margin: 0 auto;
+button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.video-container {
-  width: 100%;
-  overflow: hidden;
-  /* 其他视频容器样式 */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* 调整按钮与视频之间的距离 */
-}
 .home-link {
   margin-top: 10px; /* 向下移动 */
   margin-left: 60px; /* 向右移动 */
 }
-
-.prev-btn, .next-btn {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.prev-btn:hover, .next-btn:hover {
-  background-color: #e0e0e0;
-}
-/* .carousel-container {
-  width: 135%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-} */
-.carousel-container {
-  width: 100%;
-  max-width: 2000px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 10px 0; /* 添加上下内边距 */
-  box-sizing: border-box;
-  text-align: center; /* 使内部内联元素居中 */
-}
-.video-container {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.video-container2 {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.video-wrapper {
-  flex: 0 0 33.333%;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-.video-wrapper2 {
-  flex: 0 0 33.333%;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-video {
-  width: 100%;
-  height: auto;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.prev-btn, .next-btn {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.video-wrapper {
-    display: none;
-  }
-  .video-wrapper2{
-    display: none;
-  }
-  .video-wrapper.active {
-    display: inline-block;
-  }
-  .video-wrapper2.active {
-    display: inline-block;
-  }
-  .video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .video-container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-.prev-btn:hover, .next-btn:hover {
-  background-color: #e0e0e0;
-}
-.video-container {
-  display: flex;
-  justify-content: center; /* 或 flex-start, flex-end 等，根据需要调整 */
-  align-items: center;
-}
-.video-container2 {
-  display: flex;
-  justify-content: center; /* 或 flex-start, flex-end 等，根据需要调整 */
-  align-items: center;
-}
-
-.demo-video {
-  width: 8%;
-  min-width: 1100px;
-  max-width: 1400px;
-}
-.video-wrapper2 {
-    display: none;
-  }
-
-
-  .video-wrapper2 {
-    display: none;
-  }
-  .video-wrapper2.active {
-    display: inline-block;
-  }
-  .video-container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   </style>
 </head>
 
@@ -296,23 +147,23 @@ video {
   </div>
   
   
-  
-  
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">JoyHallo: Digital human model for Mandarin</h1>
+            <h1 class="title is-1 publication-title">JoyType: A Robust Design for Multilingual Visual Text Creation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a target="_blank">Shi Sheng</a><sup></sup>,</span>
+                <a target="_blank">Li Chao</a><sup></sup>,</span>
               <span class="author-block">
-                <a target="_blank">Cao Xuyang</a><sup></sup>,</span>
+                <a target="_blank">Jiang Chen</a><sup></sup>,</span>
               <span class="author-block">
-                <a target="_blank">Zhao Jun</a><sup></sup>,</span>
+                <a target="_blank">Liu Xiaolong</a><sup></sup>,</span>
+              <span class="author-block">
+                <a target="_blank" href="mailto:zhaojun10@jd.com">Zhao Jun</a><sup></sup>,</span>
               <span class="author-block">
                 <a target="_blank">Wang Guoxin</a><sup></sup></span>
             </div>
@@ -325,7 +176,7 @@ video {
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href=""
+                  <a href="https://arxiv.org/abs/2407."
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -336,7 +187,7 @@ video {
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/jdh-algo/JoyHallo" target="_blank"
+                  <a href="https://github.com/jdh-algo/JoyType" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -347,7 +198,7 @@ video {
 
                 <!-- huggingface demo Link -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/spaces/jdh-algo/JoyHallo-v1/tree/main" target="_blank"
+                  <a href="https://huggingface.co/spaces/jdh-algo/JoyType" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <img src="./static/images/hf-logo.png">
@@ -356,6 +207,27 @@ video {
                   </a>
                 </span>
 
+                <!-- modelscope demo Link -->
+                <!-- <span class="link-block">
+                  <a href="https://modelscope.cn/studios/jdh-algo/JoyType/summary" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="./static/images/modelscope.gif">
+                    </span>
+                    <span>ModelScope(Coming)</span>
+                  </a>
+                </span> -->
+
+                <!-- selfhosted demo Link -->
+<!--                 <span class="link-block">
+                  <a href="http://joytype.jdhealth.com/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="./static/images/JoyType.png">
+                    </span>
+                    <span>JoyType</span>
+                  </a>
+                </span> -->
               </div>
             </div>
           </div>
@@ -365,47 +237,129 @@ video {
   </section>
 
 
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
+          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser video -->
+
+
+  <!-- Image carousel -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-1-1.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-1-2.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-1-3.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-1-4.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-1-5.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-2-1.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-2-2.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-2-3.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-2-4.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-2-5.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-3-1.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-3-2.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-3-3.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-3-4.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/examples/example-3-5.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
   <!-- Paper abstract -->
   <section class="section">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <video class="demo-video" controls>
-          <source src="./static/videos/demo4.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      
-    </div>
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In the field of speech-driven video generation, creating Mandarin 
-              videos presents significant challenges. Collecting comprehensive 
-              Mandarin datasets is difficult, and Mandarin's complex lip shapes 
-              further complicate model training compared to English. Our research
-               involved collecting 29 hours of Mandarin speech video from 
-               employees at JD Health International Inc., resulting in the 
-               jdh-Hallo dataset. This dataset features a wide range of ages 
-               and speaking styles, including both conversational and specialized
-                medical topics. To adapt the JoyHallo model for Mandarin, we 
-                utilized the Chinese-wav2vec 2.0 model for audio feature 
-                embedding. Additionally, we enhanced the Hierarchical
-                 Audio-Driven Visual Synthesis module by integrating a
-                  Cross Attention mechanism, which aggregates information from
-                   lip, expression, and pose features. This integration not only
-                    improves information utilization efficiency but also 
-                    accelerates inference speed by 14.3%. The moderate coupling
-                     of information enables the model to learn relationships 
-                     between facial features, addressing issues of unnatural 
-                     appearance. These advancements lead to more precise 
-                     alignment between audio inputs and visual outputs, 
-                     enhancing the quality and realism of synthesized videos. 
-                     It is noteworthy that JoyHallo maintains its strong ability
-                      to generate English videos, demonstrating excellent 
-                      cross-language generation capabilities.
+              Generating images with accurately represented text, particularly in non-Latin languages, poses a significant challenge for diffusion models. 
+              Existing approaches, such as the integration of hint condition diagrams via auxiliary networks (e.g., ControlNet or LoRa), 
+              have made strides towards addressing this issue. Yet, diffusion models often fall short in tasks requiring controlled text generation, 
+              like specifying particular fonts or producing text in small fonts. 
+              In our study, we introduce a novel approach for multilingual visual text synthesis, named JoyType, 
+              designed to maintain the font style of text throughout the image generation process. 
+              Our methodology began with assembling a training dataset comprising 1M pairs of data, each pair including an image, 
+              its description, and a canny map of the text within the image. We then developed a text glyph control network, 
+              Font ControlNet, tasked with extracting glyph information to steer the image generation process. 
+              To further improve our model's capability to preserve text glyphs, notably in generating small-font text, 
+              we incorporated a multi-layer OCR-aware loss into the diffusion process. 
+              This enhancement allows our model to direct the generation process using low-level descriptors, 
+              resulting in text that is both clearer and more legible. Our evaluations, 
+              based on both visual and accuracy metrics, demonstrate that JoyType significantly outperforms existing state-of-the-art (SOTA) methods. 
+              Additionally, JoyType can function as a plugin, facilitating the creation of varied image styles in conjunction with other stable diffusion base models on Civitai. 
+              This versatility has been successfully demonstrated across three application areas: creative cards, health cards, and marketing images, all yielding satisfactory outcomes.
             </p>
           </div>
         </div>
@@ -420,9 +374,22 @@ video {
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2">Framework</h2>
+          <h2 class="title is-2">Method</h2>
           <div class="content has-text-justified">
             <p>
+              Figure 1 introduces the whole framework of our method, including data collection, training pipeline, and inference pipeline.
+              In the data collection phase, we leveraged the open-source CapOnImage2M dataset, selecting a subset of 1M images. 
+              For each selected image, we employed a Visual Language Model (e.g., CogVLM) to generate textual descriptions, thereby obtaining prompts associated with the images. 
+              We applied the canny algorithm to extract edges from text regions within the images, creating a canny map.
+              The training pipeline comprises three primary components: the latent diffusion module, the Font ControlNet module, and the loss design module. 
+              More precisely, during training, the raw image, canny map, and prompt are fed into the Variational Autoencoder (VAE), 
+              Font ControlNet, and text encoder, respectively. The loss function is bifurcated into two segments: the latent space and the pixel space. 
+              Within the latent space, we utilize the loss function $L_{LDM}$ associated with Latent Diffusion Models as outlined in the source paper. 
+              The latent features are then decoded back into images via the VAE decoder. 
+              Within the pixel space, the text regions of both the predicted and the ground truth images are cropped and processed through an OCR model independently. 
+              We extract the convolutional layer features from the OCR model and compute the Mean Squared Error (MSE) loss between the features of each layer, thereby constituting the loss $L_{ocr}$.
+
+During the inference phase, the image prompt, textual content, and specified areas for text generation are input into the text encoder and Font ControlNet, respectively. The final image is then generated by the VAE decoder.
             </p>
           </div>
         </div>
@@ -432,8 +399,9 @@ video {
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
-        <img src="./static/images/pipeline.png" style="width: 80%;">
-        <!-- <h6 class="title is-6" style="text-align: center;">Figure 1. Pipeline of training and inferencing</h6> -->
+        <img src="./static/images/methods/framework_2.png" style="width: 60%;">
+        <img src="./static/images/methods/framework_1.png" style="width: 60%;">
+        <h6 class="title is-6" style="text-align: center;">Figure 1. Pipeline of training and inferencing</h6>
         <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
       </div>
     </div>
@@ -446,169 +414,28 @@ video {
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2">Videos</h2>
+          <h2 class="title is-2">Experiments</h2>
           <br>
-          <!-- <h4 class="title is-4" style="text-align: left;">Mandarin</h4> -->
+          <h4 class="title is-4" style="text-align: left;">1. Performance on Different Fonts</h4>
           <div class="content has-text-justified">
-            <h4 class="title is-4" style="text-align: center;">Mandarin Speech</h4>
-            <div class="content has-text-justified">
-              <div class="carousel-container">
-                <div class="video-container">
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/1_0.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/6_0.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/7_1.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/4_0.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/3_0.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/5_1.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-         
-              </div>
- 
-          </div>
-
-          <div class="content has-text-justified">
-            <h4 class="title is-4" style="text-align: center;">Mandarin Song</h4>
-            <div class="content has-text-justified">
-              <div class="carousel-container">
-                <div class="video-container">
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo/4_6.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo-en/0_s7_7.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video-wrapper active">
-                    <video controls>
-                      <source src="./static/joyhallo-en/0_s6_7.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-              
-
-
-              
-      <div class="content has-text-justified">
-        <h4 class="title is-4" style="text-align: center;">English Speech</h4>
-        <div class="content has-text-justified">
-
-          <div class="carousel-container">
-            <div class="video-container">
-
-
-              <div class="video-wrapper active">
-                <video controls>
-                  <source src="./static/joyhallo-en/5_3.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-wrapper active">
-                <video controls>
-                  <source src="./static/joyhallo-en/7_2.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-wrapper active">
-                <video controls>
-                  <source src="./static/joyhallo-en/s7_2.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-     
-          </div>
-          </div>
-          <div class="content has-text-justified">
-          <h4 class="title is-4" style="text-align: center;">English Song</h4>
-          <div class="content has-text-justified">
-
-            <div class="carousel-container">
-              <div class="video-container2">
-            
-                <div class="video-wrapper2 active">
-                  <video controls>
-                    <source src="./static/joyhallo-en/1_5.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper2 active">
-                  <video controls>
-                    <source src="./static/joyhallo-en/6_5.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper2 active">
-                  <video controls>
-                    <source src="./static/joyhallo-en/4_4.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper2 ">
-                  <video controls>
-                    <source src="./static/joyhallo-en/3_5.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-              <div class="button-container">
-                <button class="prev-btn">←</button>
-                <button class="next-btn">→</button>
-              </div>
-            </div>
-            
-        </div>
-          
-      </div>
-      </div>
-
-        </div>
-      </div>
-    </div>
-    <br>
-
-    <!-- <br> -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <!-- <h2 class="title is-3">Improved aesthetics quality</h2>
-        <h3 class="title is-4" style="text-align: center;">User study results</h3> -->
-        <!-- <h6 class="title is-6" style="text-align: center;">Table 2. Performance on less recognizable artistic fonts</h6>
-        <img src="./static/images/experiments/exps-1.svg" style="width: 100%;"> -->
-        <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
-      </div>
-    </div>
-
-   
-
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <br>
-          <h2 class="title is-2">Comparison</h2>
-          <div class="content has-text-justified">
+            <p>
+              Table 1 and Table 2 demonstrate the ability of our JoyType model to maintain character shapes. 
+              Specifically, we employed 40 different fonts as hint conditions input into our model, generating creative images. 
+              Sentence Accuracy (Acc) and the Normalized Edit Distance (NED) are used as evaluation metrics to identify the recognizability of characters within an image. 
+              In this recognition process, we employ an open-source OCR model (DuGuangOCR ModelScope (2023)). 
+            </p>
+            <p>
+              Typographic white Blackground Image refers to images printed with selected fonts on a white background, 
+              while Generated Image represents images generated by our JoyType. 
+              To ensure fairness in evaluating each font, both types of images use the same font size. 
+              The closer the performance metrics on the Generated Image are to those on the Typographic white Blackground Image, 
+              the stronger the model's ability to preserve the font character.
+            </p>
+            <p>
+              In Table 1, we used fonts that are generally more easily recognizable, 
+              while in Table 2, we used less recognizable artistic fonts. 
+              The experimental results show that our model has good character preservation capabilities on both types of fonts.
+            </p>
           </div>
         </div>
       </div>
@@ -617,36 +444,360 @@ video {
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
-        <h6 class="title is-6" style="text-align: center;">Table 1. Accuracy comparison in Mandarin</h6>
-        <img src="./static/images/experiments/cop1.png" style="width: 100%;">
-        <div class="content has-text-justified">
-        </div>
-        <h6 class="title is-6" style="text-align: center;">Table 2. Inference efficiency comparison</h6>
-        <img src="./static/images/experiments/cop2.png" style="width: 100%;">
+        <h6 class="title is-6" style="text-align: center;">Table 1. Performance on easily recognized fonts</h6>
+        <img src="./static/images/experiments/exps-2.svg" style="width: 100%;">
+        <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
       </div>
     </div>
-  </div>
+    <!-- <br> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Improved aesthetics quality</h2>
+        <h3 class="title is-4" style="text-align: center;">User study results</h3> -->
+        <h6 class="title is-6" style="text-align: center;">Table 2. Performance on less recognizable artistic fonts</h6>
+        <img src="./static/images/experiments/exps-1.svg" style="width: 100%;">
+        <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
+      </div>
+    </div>
 
+    <div class="container is-max-desktop">
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/JDLangZhengTi-Regular_0.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/华文新魏_0.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字小魂仔仔体_3.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字小魂月影手书_1.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字小魂温暖童稚体_0.jpg"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字小魂萌趣莫莉体_2.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字小魂阿开童漫体_1.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字魂功夫体_1.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字魂小茉莉_0.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字魂游龙_2.jpg"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/字魂霸燃手书_1.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/巴蜀墨迹_1.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/思源宋体-Regular_2.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/思源黑体CN-Normal_0.jpg"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/fonts/荆南麦圆体_0.jpg"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <!-- <h2 class="title is-3">Improved aesthetics quality</h2>
+          <h3 class="title is-4" style="text-align: center;">User study results</h3> -->
+          <h6 class="title is-6" style="text-align: center;">Figure 2. Generated images on different fonts</h6>
+          <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <h4 class="title is-4" style="text-align: left;">2. Performance on Different Models</h4>
+          <div class="content has-text-justified">
+            <p>
+              Table 3 presents a comparison between the current state-of-the-art (SOTA) methods and our JoyType. 
+              In this comparison, our method employs the ArialUnicode font to create hint-conditioned graphs. 
+              It is not hard to see that our JoyType outperforms other competitors in terms of ACC, NED, and FID metrics, achieving the best performance. 
+              The ACC and NED metrics indicate that the text generated by our JoyType is more recognizable, which is mainly due to JoyType's capability to preserve the shape of font characters. 
+              Further, we found that using more detailed prompt descriptions helps to generate higher quality images. 
+              We use CogVLM to generate captions for the images in benchmark database, 
+              and then use these new descriptions as prompts for input into the JoyType model, 
+              referred to as JoyType_w_cogvlm, which noticeably improves the FID metric, from 34 to 26.75.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
+        <h6 class="title is-6" style="text-align: center;">Table 3. Performance on different models</h6>
+        <img src="./static/images/experiments/exps-3.svg" style="width: 40%;">
+        <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
+      </div>
+    </div>
   </section>
- 
+  <!-- End paper abstract -->
 
 
+  <!-- Image carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              First image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Second image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Third image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Fourth image description.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End image carousel -->
 
 
-  <!-- BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!-- Image carousel -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">Galleries</h2>
+        </div>
+      </div>
+      <br>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-8.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-4.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-1.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-2.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-5.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-21.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-7.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-22.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-9.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-20.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-11.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-12.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-13.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-14.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-15.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-16.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-17.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-18.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-19.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-10.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-23.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-24.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-25.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-26.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-27.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-centered">
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-28.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-29.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-30.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-31.png"/>
+            <p></p>
+          </div>
+          <div class="column is-3 ">
+            <img src="./static/images/galleries/gal-32.png"/>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{JoyHallo2024,
-  title={JoyHallo: Digital human model for Mandarin},
-  author={Sheng Shi and Xuyang Cao and Jun Zhao and Guoxin Wang},
-  year={2024},
-  url={https://github.com/jdh-algo/JoyHallo}
-}</code></pre>
-  
+      <pre><code>BibTex Code Here</code></pre>
     </div>
-  </section> 
-  <!--End BibTex citation
+  </section> -->
+  <!--End BibTex citation -->
 
 
   <footer class="footer">
@@ -672,36 +823,6 @@ video {
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
   <!-- End of Statcounter Code -->
-
-
-<script>
- const videoWrappers = document.querySelectorAll('.video-wrapper2');
-  let currentIndex = 0;
-  const videosToShow = 3;
-
-  function updateVideos() {
-    videoWrappers.forEach((video, index) => {
-      video.classList.remove('active');
-      if (index >= currentIndex && index < currentIndex + videosToShow) {
-        video.classList.add('active');
-      }
-    });
-  }
-
-  document.querySelector('.prev-btn').addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : videoWrappers.length - videosToShow;
-    updateVideos();
-  });
-
-  document.querySelector('.next-btn').addEventListener('click', () => {
-    currentIndex = (currentIndex < videoWrappers.length - videosToShow) ? currentIndex + 1 : 0;
-    updateVideos();
-  });
-
-  updateVideos();
-
-
-</script>
 
 </body>
 
