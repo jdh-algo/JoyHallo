@@ -13,6 +13,23 @@ import argparse
 
 import gradio as gr
 from inference import inference_process
+from omegaconf import OmegaConf
+
+
+def load_config(config_path: str) -> dict:
+    """
+    Loads the configuration file.
+
+    Args:
+        config_path (str): Path to the configuration file.
+
+    Returns:
+        dict: The configuration dictionary.
+    """
+
+    if config_path.endswith(".yaml"):
+        return OmegaConf.load(config_path)
+    raise ValueError("Unsupported format for config file")
 
 
 def predict(image, audio, pose_weight, face_weight, lip_weight, face_expand_ratio, progress=gr.Progress(track_tqdm=True)):
@@ -21,17 +38,20 @@ def predict(image, audio, pose_weight, face_weight, lip_weight, face_expand_rati
     """
     _ = progress
     config = {
-        'source_image': image,
-        'driving_audio': audio,
+        'ref_img_path': [image],
+        'audio_path': [audio],
         'pose_weight': pose_weight,
         'face_weight': face_weight,
         'lip_weight': lip_weight,
         'face_expand_ratio': face_expand_ratio,
-        'config': 'configs/inference/default.yaml',
+        'config': 'configs/inference/inference.yaml',
         'checkpoint': None,
         'output': ".cache/output.mp4"
     }
+    _config = load_config(config['config'])
     args = argparse.Namespace()
+    for key, value in _config.items():
+        setattr(args, key, value)
     for key, value in config.items():
         setattr(args, key, value)
     return inference_process(args)

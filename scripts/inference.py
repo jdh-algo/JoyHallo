@@ -400,7 +400,7 @@ def log_validation(
     return tensor_result
 
 
-def train_stage2_process(cfg: argparse.Namespace) -> None:
+def inference_process(cfg: argparse.Namespace) -> None:
     """
     Trains the model using the given configuration (cfg).
 
@@ -533,12 +533,12 @@ def train_stage2_process(cfg: argparse.Namespace) -> None:
 
     m,u = net.load_state_dict(
         torch.load(
-            config.audio_ckpt_dir,
+            cfg.audio_ckpt_dir,
             map_location="cpu",
         ),
     )
     assert len(m) == 0 and len(u) == 0, "Fail to load correct checkpoint."
-    print("loaded weight from ", os.path.join(config.audio_ckpt_dir))
+    print("loaded weight from ", os.path.join(cfg.audio_ckpt_dir))
 
     # get noise scheduler
     _, val_noise_scheduler = get_noise_scheduler(cfg)
@@ -635,15 +635,6 @@ def train_stage2_process(cfg: argparse.Namespace) -> None:
             exp_name,
             init_kwargs={"mlflow": {"run_name": run_time}},
         )
-        # dump config file
-        mlflow.log_dict(
-            OmegaConf.to_container(
-                cfg), "config.yaml"
-        )
-        logger.info(f"save config to {save_dir}")
-        OmegaConf.save(
-            cfg, os.path.join(save_dir, "config.yaml")
-        )
 
     logger.info("***** Running Inferencing *****")
 
@@ -695,6 +686,6 @@ if __name__ == "__main__":
 
     try:
         config = load_config(args.config)
-        train_stage2_process(config)
+        inference_process(config)
     except Exception as e:
         logging.error("Failed to execute the training process: %s", e)
