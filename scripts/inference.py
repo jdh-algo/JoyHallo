@@ -387,7 +387,10 @@ def log_validation(
         ref_name = os.path.basename(ref_img_path).split('.')[0]
         output_file = os.path.join(save_dir,f"{global_step}_{ref_name}_{audio_name}.mp4")
         # save the result after all iteration
-        tensor_to_video(tensor_result, output_file, audio_path)
+        if 'output' in cfg and cfg.output:
+            tensor_to_video(tensor_result, cfg.output, audio_path)
+        else:
+            tensor_to_video(tensor_result, output_file, audio_path)
 
 
     # clean up
