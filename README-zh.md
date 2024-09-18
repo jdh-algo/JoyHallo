@@ -4,6 +4,7 @@
 <div align='left'>
     <a href='https://fudan-generative-vision.github.io/hallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href='https://huggingface.co/jdh-algo/JoyHallo-v1'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
+    <a href='https://huggingface.co/spaces/jdh-algo/JoyHallo'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow'></a>
 </div>
 <br>
 
@@ -136,7 +137,7 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 音频:
 
 - 音频为 `wav`格式；
-- 中文或者英语，音频尽量清晰，背景音乐适合。
+- 中文、英语或者混合，音频尽量清晰，背景音乐适合。
 
 注意：这里的要求**同时针对训练过程和推理过程**。
 

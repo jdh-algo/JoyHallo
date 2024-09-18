@@ -4,6 +4,7 @@
 <div align='left'>
     <a href='https://jdh-algo.github.io/JoyHallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href='https://huggingface.co/jdh-algo/JoyHallo-v1'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
+    <a href='https://huggingface.co/spaces/jdh-algo/JoyHallo'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow'></a>
 </div>
 <br>
 
@@ -131,12 +132,12 @@ The final `pretrained_models` directory should look like this:
 **Image**:
 
 - Cropped to square shape.
-- Face should be facing forward and occupy 50%-70% of the image area.
+- Face should be facing forward and occupy 50%-70% of the image.
 
 **Audio**:
 
-- Audio in `wav` format.
-- Mandarin or English, with clear audio and suitable background music.
+- Use `wav` format.
+- Mandarin, English or mixed, with clear audio and suitable background music.
 
 Notes: These requirements apply to **both training and inference processes**.
 
