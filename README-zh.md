@@ -142,6 +142,8 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 ## 🚀 推理
 
+### 1. 使用命令行进行推理
+
 使用下面命令进行推理:
 
 ```bash
@@ -155,6 +157,16 @@ sh joyhallo-infer.sh
 - audio_path: 参考音频路径；
 - output_dir: 输出路径；
 - exp_name: 输出文件夹。
+
+### 2. 使用web demo进行推理
+
+使用下面命令启动web demo:
+
+```bash
+sh joyhallo-app.sh
+```
+
+Demo会被创建在 [http://127.0.0.1:7860](http://127.0.0.1:7860)。
 
 ## ⚓️ 训练或者微调 JoyHallo
 

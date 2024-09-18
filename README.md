@@ -142,6 +142,8 @@ Notes: These requirements apply to **both training and inference processes**.
 
 ## 🚀 Inference
 
+### 1. Inference with command line
+
 Use the following command to perform inference:
 
 ```bash
@@ -155,6 +157,16 @@ Modify the parameters in `configs/inference/inference.yaml` to specify the audio
 * audio_path: Path to the reference audios.
 * output_dir: Output directory.
 * exp_name: Output file folder name.
+
+### 2. Inference with web demo
+
+Use the following command to start web demo:
+
+```bash
+sh joyhallo-app.sh
+```
+
+The demo will be create at [http://127.0.0.1:7860](http://127.0.0.1:7860).
 
 ## ⚓️ Train or fine-tune JoyHallo
 
