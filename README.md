@@ -10,7 +10,7 @@
 
 ## 📖 Introduction
 
-In the field of speech-driven video generation, creating Mandarin videos presents significant challenges. Collecting comprehensive Mandarin datasets is difficult, and Mandarin's complex lip shapes further complicate model training compared to English. Our research involved collecting 29 hours of Mandarin speech video from employees at JD Health International Inc., resulting in the jdh-Hallo dataset. This dataset features a wide range of ages and speaking styles, including both conversational and specialized medical topics. To adapt the JoyHallo model for Mandarin, we utilized the Chinese-wav2vec 2.0 model for audio feature embedding. Additionally, we enhanced the Hierarchical Audio-Driven Visual Synthesis module by integrating a Cross Attention mechanism, which aggregates information from lip, expression, and pose features. This integration not only improves information utilization efficiency but also accelerates inference speed by 14.3%. The moderate coupling of information enables the model to learn relationships between facial features, addressing issues of unnatural appearance. These advancements lead to more precise alignment between audio inputs and visual outputs, enhancing the quality and realism of synthesized videos. It is noteworthy that JoyHallo maintains its strong ability to generate English videos, demonstrating excellent cross-language generation capabilities.
+In audio-driven video generation, creating Mandarin videos presents significant challenges. Collecting comprehensive Mandarin datasets is difficult, and the complex lip movements in Mandarin further complicate model training compared to English. In this study, we collected 29 hours of Mandarin speech video from JD Health International Inc. employees, resulting in the jdh-Hallo dataset. This dataset includes a diverse range of ages and speaking styles, encompassing both conversational and specialized medical topics. To adapt the JoyHallo model for Mandarin, we employed the Chinese wav2vec2 model for audio feature embedding. A semi-decoupled structure is proposed to capture inter-feature relationships among lip, expression, and pose features. This integration not only improves information utilization efficiency but also accelerates inference speed by 14.3%. Notably, JoyHallo maintains its strong ability to generate English videos, demonstrating excellent cross-language generation capabilities.
 
 ## 🎬 Videos-Mandarin-Woman
 
@@ -75,8 +75,8 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 For convenience, we have uploaded the model weights to both **Huggingface** and **JD Cloud**.
 
-|  Model  |  Dataset  |                              Huggingface                              |                                       JD Cloud                                       |
-| :------: | :-------: | :-------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
+|  Model  |  Dataset  |                     Huggingface                     |                                       JD Cloud                                       |
+| :------: | :-------: | :--------------------------------------------------: | :----------------------------------------------------------------------------------: |
 | JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
 
 ### 4. pretrained_models contents
@@ -213,17 +213,25 @@ python -m scripts.data_preprocess --input_dir joyhallo/videos --step 2
 
 ### 1. Accuracy comparison in Mandarin
 
-|  Model  | Sync-C $\uparrow$ | Sync-D $\downarrow$ | Smooth $\uparrow$ | Subject $\uparrow$ | Background $\uparrow$ |
-| :------: | :----------------: | :------------------: | :----------------: | :-----------------: | :--------------------: |
-|  Hallo  |       5.7420       |  **13.8140**  |       0.9924       |       0.9855       |    **0.9651**    |
-| JoyHallo |  **6.1596**  |       14.2053       |  **0.9925**  |  **0.9864**  |         0.9627         |
+|  Model  | IQA $\uparrow$ | VQA $\uparrow$ | Sync-C $\uparrow$ | Sync-D $\downarrow$ | Smooth $\uparrow$ | Subject $\uparrow$ | Background $\uparrow$ |
+| :------: | :--------------: | :--------------: | :----------------: | :------------------: | :----------------: | :-----------------: | :--------------------: |
+|  Hallo  | **0.7865** |      0.8563      |       5.7420       |  **13.8140**  |       0.9924       |       0.9855       |    **0.9651**    |
+| JoyHallo |      0.7781      | **0.8566** |  **6.1596**  |       14.2053       |  **0.9925**  |  **0.9864**  |         0.9627         |
 
 Notes: The evaluation metrics used here are from the following repositories, and the results are for reference purposes only:
 
+- IQA and VQA: [Q-Align](https://github.com/Q-Future/Q-Align)
 - Sync-C and Sync-D: [Syncnet](https://github.com/joonson/syncnet_python)
 - Smooth, Subject, and Background: [VBench](https://github.com/Vchitect/VBench)
 
-### 2. Inference efficiency comparison
+### 2. Accuracy comparison in English
+
+|  Model  | IQA $\uparrow$ | VQA $\uparrow$ | Sync-C $\uparrow$ | Sync-D $\downarrow$ | Smooth $\uparrow$ | Subject $\uparrow$ | Background $\uparrow$ |
+| :------: | :--------------: | :--------------: | :----------------: | :------------------: | :----------------: | :-----------------: | :--------------------: |
+|  Hallo  | **0.7779** |      0.8471      |       4.4093       |  **13.2340**  |       0.9921       |       0.9814       |    **0.9649**    |
+| JoyHallo | **0.7779** | **0.8537** |  **4.7658**  |       13.3617       |  **0.9922**  |  **0.9838**  |         0.9622         |
+
+### 3. Inference efficiency comparison
 
 |                              | JoyHallo | Hallo |   Improvement   |
 | :---------------------------: | :------: | :----: | :-------------: |
@@ -245,4 +253,4 @@ If you find our work helpful, please consider citing us:
 
 ## 🤝 Acknowledgments
 
-We would like to thank the contributors to the [Hallo](https://github.com/fudan-generative-vision/hallo), [wav2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec), [Chinese-wav2vec2](https://github.com/TencentGameMate/chinese_speech_pretrain), [Syncnet](https://github.com/joonson/syncnet_python), [VBench](https://github.com/Vchitect/VBench), and [Moore-AnimateAnyone](https://github.com/MooreThreads/Moore-AnimateAnyone) repositories, for their open research and extraordinary work.
+We would like to thank the contributors to the [Hallo](https://github.com/fudan-generative-vision/hallo), [wav2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec), [Chinese-wav2vec2](https://github.com/TencentGameMate/chinese_speech_pretrain), [Q-Align](https://github.com/Q-Future/Q-Align), [Syncnet](https://github.com/joonson/syncnet_python), [VBench](https://github.com/Vchitect/VBench), and [Moore-AnimateAnyone](https://github.com/MooreThreads/Moore-AnimateAnyone) repositories, for their open research and extraordinary work.
