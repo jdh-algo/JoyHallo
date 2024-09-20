@@ -393,30 +393,16 @@ video {
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In the field of speech-driven video generation, creating Mandarin 
-              videos presents significant challenges. Collecting comprehensive 
-              Mandarin datasets is difficult, and Mandarin's complex lip shapes 
-              further complicate model training compared to English. Our research
-               involved collecting 29 hours of Mandarin speech video from 
-               employees at JD Health International Inc., resulting in the 
-               jdh-Hallo dataset. This dataset features a wide range of ages 
-               and speaking styles, including both conversational and specialized
-                medical topics. To adapt the JoyHallo model for Mandarin, we 
-                utilized the Chinese-wav2vec 2.0 model for audio feature 
-                embedding. Additionally, we enhanced the Hierarchical
-                 Audio-Driven Visual Synthesis module by integrating a
-                  Cross Attention mechanism, which aggregates information from
-                   lip, expression, and pose features. This integration not only
-                    improves information utilization efficiency but also 
-                    accelerates inference speed by 14.3%. The moderate coupling
-                     of information enables the model to learn relationships 
-                     between facial features, addressing issues of unnatural 
-                     appearance. These advancements lead to more precise 
-                     alignment between audio inputs and visual outputs, 
-                     enhancing the quality and realism of synthesized videos. 
-                     It is noteworthy that JoyHallo maintains its strong ability
-                      to generate English videos, demonstrating excellent 
-                      cross-language generation capabilities.
+              In audio-driven video generation, creating Mandarin videos presents significant challenges. 
+              Collecting comprehensive Mandarin datasets is difficult, and the complex lip movements in 
+              Mandarin further complicate model training compared to English. In this study, we collected 
+              29 hours of Mandarin speech video from JD Health International Inc. employees, resulting in the jdh-Hallo dataset. 
+              This dataset includes a diverse range of ages and speaking styles, encompassing both conversational and specialized medical topics. 
+              To adapt the JoyHallo model for Mandarin, we employed the Chinese wav2vec2 model for audio feature embedding. 
+              A semi-decoupled structure is proposed to capture inter-feature relationships among lip, expression, 
+              and pose features. This integration not only improves information utilization efficiency but also 
+              accelerates inference speed by 14.3%. Notably, JoyHallo maintains its strong ability to generate English videos, 
+              demonstrating excellent cross-language generation capabilities.
             </p>
           </div>
         </div>
@@ -443,7 +429,7 @@ video {
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
-        <img src="./static/images/pipeline.png" style="width: 80%;">
+        <img src="./static/images/pipeline.png" style="display: block; margin: 0 auto; width: 60%; min-width: 1100px; max-width: 1400px;">
         <!-- <h6 class="title is-6" style="text-align: center;">Figure 1. Pipeline of training and inferencing</h6> -->
         <!-- <img src="./static/assets/v2_vs_dalle.png" alt="v2_vs_dalle" style="width: 80%;"> -->
       </div>
@@ -629,11 +615,15 @@ video {
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Improved aesthetics quality</h2> -->
         <h6 class="title is-6" style="text-align: center;">Table 1. Accuracy comparison in Mandarin</h6>
-        <img src="./static/images/experiments/cop1.png" style="width: 100%;">
+        <img src="./static/images/experiments/cop1.png" style="width: 100%; margin: 0 auto; display: block;">
         <div class="content has-text-justified">
         </div>
-        <h6 class="title is-6" style="text-align: center;">Table 2. Inference efficiency comparison</h6>
-        <img src="./static/images/experiments/cop2.png" style="width: 100%;">
+        <h6 class="title is-6" style="text-align: center;">Table 2. Accuracy comparison in English</h6>
+        <img src="./static/images/experiments/cop2.png" style="width: 100%; margin: 0 auto; display: block;">
+        <div class="content has-text-justified">
+        </div>
+        <h6 class="title is-6" style="text-align: center;">Table 3. Inference efficiency comparison</h6>
+        <img src="./static/images/experiments/cop3.png" style="width: 75%; margin: 0 auto; display: block;">
       </div>
     </div>
   </div>
