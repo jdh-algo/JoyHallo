@@ -73,11 +73,11 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 ### 3. Download JoyHallo model
 
-For convenience, we have uploaded the model weights to both **Huggingface** and **JD Cloud**.
+For convenience, we have uploaded the model weights to **Hugging Face**.
 
-|  Model  |  Dataset  |                     Huggingface                     |                                       JD Cloud                                       |
-| :------: | :-------: | :--------------------------------------------------: | :----------------------------------------------------------------------------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) | [JoyHallo](https://medicine-ai.s3.cn-north-1.jdcloud-oss.com/JoyHallo/joyhallo/net.pth) |
+|  Model  |  Dataset  |                     Hugging Face                     |
+| :------: | :-------: | :--------------------------------------------------: |
+| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) |
 
 ### 4. pretrained_models contents
 
