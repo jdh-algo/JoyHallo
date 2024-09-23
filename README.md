@@ -3,6 +3,7 @@
 <br>
 <div align='left'>
     <a href='https://jdh-algo.github.io/JoyHallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
+    <a href='https://arxiv.org/pdf/2409.13268'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
     <a href='https://huggingface.co/jdh-algo/JoyHallo-v1'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
     <a href='https://huggingface.co/spaces/jdh-algo/JoyHallo'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow'></a>
 </div>
