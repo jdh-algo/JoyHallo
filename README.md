@@ -244,11 +244,14 @@ Notes: The evaluation metrics used here are from the following repositories, and
 If you find our work helpful, please consider citing us:
 
 ```
-@misc{JoyHallo2024,
-  title={JoyHallo: Digital human model for Mandarin},
+@misc{shi2024joyhallo,
+  title={JoyHallo: Digital human model for Mandarin}, 
   author={Sheng Shi and Xuyang Cao and Jun Zhao and Guoxin Wang},
   year={2024},
-  url={https://github.com/jdh-algo/JoyHallo}
+  eprint={2409.13268},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2409.13268}, 
 }
 ```
 

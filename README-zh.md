@@ -244,11 +244,14 @@ python -m scripts.data_preprocess --input_dir joyhallo/videos --step 2
 如果您觉得我们的工作有帮助，请考虑引用我们：
 
 ```
-@misc{JoyHallo2024,
-  title={JoyHallo: Digital human model for Mandarin},
+@misc{shi2024joyhallo,
+  title={JoyHallo: Digital human model for Mandarin}, 
   author={Sheng Shi and Xuyang Cao and Jun Zhao and Guoxin Wang},
   year={2024},
-  url={https://github.com/jdh-algo/JoyHallo}
+  eprint={2409.13268},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2409.13268}, 
 }
 ```
 
