@@ -125,7 +125,7 @@ def process_all_videos(input_video_list: List[Path], output_dir: Path, step: int
     face_analysis_model_path = "pretrained_models/face_analysis"
     landmark_model_path = "pretrained_models/face_analysis/models/face_landmarker_v2_with_blendshapes.task"
     audio_separator_model_file = "pretrained_models/audio_separator/Kim_Vocal_2.onnx"
-    wav2vec_model_path = "/mnt/afs2/shisheng7/digital_human/Moore-AnimateAnyone/fast-DiT/pretrained/chinese-wav2vec2-base" # 'pretrained_models/wav2vec/wav2vec2-base-960h'
+    wav2vec_model_path = "pretrained_models/chinese-wav2vec2-base" # 'pretrained_models/wav2vec/wav2vec2-base-960h'
 
     audio_processor = AudioProcessor(
         16000,
