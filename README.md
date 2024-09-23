@@ -78,7 +78,7 @@ For convenience, we have uploaded the model weights to **Hugging Face**.
 
 |  Model  |  Dataset  |                     Hugging Face                     |
 | :------: | :-------: | :--------------------------------------------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) |
+| JoyHallo | jdh-Hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) |
 
 ### 4. pretrained_models contents
 
@@ -140,7 +140,7 @@ The final `pretrained_models` directory should look like this:
 - Use `wav` format.
 - Mandarin, English or mixed, with clear audio and suitable background music.
 
-Notes: These requirements apply to **both training and inference processes**.
+**Note**: These requirements apply to **both training and inference processes**.
 
 ## 🚀 Inference
 
@@ -195,7 +195,7 @@ This will start training from  **Stage 2** , and you can adjust the training par
 ### 1. Prepare the data in the following directory structure, ensuring that the data meets the requirements mentioned earlier
 
 ```text
-joyhallo/
+jdh-Hallo/
 |-- videos/
 |   |-- 0001.mp4
 |   |-- 0002.mp4
@@ -206,9 +206,16 @@ joyhallo/
 ### 2. Use the following command to process the dataset
 
 ```bash
-python -m scripts.data_preprocess --input_dir joyhallo/videos --step 1
-python -m scripts.data_preprocess --input_dir joyhallo/videos --step 2
+# 1. Extract features from videos.
+python -m scripts.data_preprocess --input_dir jdh-Hallo/videos --step 1 -p 1 -r 0
+python -m scripts.data_preprocess --input_dir jdh-Hallo/videos --step 2 -p 1 -r 0
+
+# 2. Get jdh-Hallo dataset.
+python scripts/extract_meta_info_stage1.py -r jdh-Hallo -n jdh-Hallo
+python scripts/extract_meta_info_stage2.py -r jdh-Hallo -n jdh-Hallo
 ```
+
+**Note**: Execute steps 1 and 2 sequentially as they perform different tasks. Step 1 converts videos into frames, extracts audio from each video, and generates the necessary masks. Step 2 generates face embeddings using InsightFace and audio embeddings using Chinese wav2vec2, and requires a GPU. For parallel processing, use the `-p` and `-r` arguments. The `-p` argument specifies the total number of instances to launch, dividing the data into `p` parts. The `-r` argument specifies which part the current process should handle. You need to manually launch multiple instances with different values for `-r`.
 
 ## 💻 Comparison
 

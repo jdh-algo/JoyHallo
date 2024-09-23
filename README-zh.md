@@ -78,7 +78,7 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 |   模型   |   数据   |                     Hugging Face                     |
 | :------: | :-------: | :--------------------------------------------------: |
-| JoyHallo | jdh-hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) |
+| JoyHallo | jdh-Hallo | [JoyHallo](https://huggingface.co/jdh-algo/JoyHallo-v1) |
 
 ### 4. pretrained_models 目录
 
@@ -140,7 +140,7 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 - 音频为 `wav`格式；
 - 中文、英语或者混合，音频尽量清晰，背景音乐适合。
 
-注意：这里的要求**同时针对训练过程和推理过程**。
+**注意**：这里的要求**同时针对训练过程和推理过程**。
 
 ## 🚀 推理
 
@@ -195,7 +195,7 @@ sh joyhallo-train.sh
 ### 1. 按照下列目录准备数据，注意数据要符合前面提到的要求
 
 ```text
-joyhallo/
+jdh-Hallo/
 |-- videos/
 |   |-- 0001.mp4
 |   |-- 0002.mp4
@@ -206,9 +206,16 @@ joyhallo/
 ### 2. 使用下面命令处理数据集
 
 ```bash
-python -m scripts.data_preprocess --input_dir joyhallo/videos --step 1
-python -m scripts.data_preprocess --input_dir joyhallo/videos --step 2
+# 1. 从视频提取特征
+python -m scripts.data_preprocess --input_dir jdh-Hallo/videos --step 1 -p 1 -r 0
+python -m scripts.data_preprocess --input_dir jdh-Hallo/videos --step 2 -p 1 -r 0
+
+# 2. 生成jdh-Hallo数据集
+python scripts/extract_meta_info_stage1.py -r jdh-Hallo -n jdh-Hallo
+python scripts/extract_meta_info_stage2.py -r jdh-Hallo -n jdh-Hallo
 ```
+
+**注意**：按照顺序执行步骤1和步骤2，因为它们执行不同的任务。步骤1将视频转换为帧，提取每个视频的音频，并生成必要的掩码。步骤2使用InsightFace生成面部嵌入，并使用Chinese wav2vec2生成音频嵌入，需要GPU来加速处理。对于并行处理，可以使用`-p`和`-r`参数。`-p`参数指定要启动的实例总数，数据将被分成`p`份。`-r`参数指定当前进程应该处理的哪一部分。需要手动启动多个实例，每个实例的`-r`参数值不同。
 
 ## 💻 模型对比
 
