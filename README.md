@@ -74,6 +74,11 @@ git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 ### 3. Download JoyHallo model
 
+```bash
+git lfs install
+git clone https://huggingface.co/jdh-algo/JoyHallo-v1 pretrained_models/joyhallo
+```
+
 For convenience, we have uploaded the model weights to **Hugging Face**.
 
 |  Model  |  Dataset  |                     Hugging Face                     |
