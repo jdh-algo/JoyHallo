@@ -157,7 +157,7 @@ Use the following command to perform inference:
 sh joyhallo-infer.sh
 ```
 
-**Kindly remind**: If you want to improve the inference speed, you can change the `inference_steps` from **40** to **15** in `configs/inference/inference.yaml`. That will enhance the efficiency immediately. You can decrease that even more, but will get a worse result. You can try changing `cfg_scale` together.
+**Kindly remind**: If you want to improve the inference speed, you can change the `inference_steps` from **40** to **15** in `configs/inference/inference.yaml`. That will enhance the efficiency immediately. You can decrease that even more, but you may get a worse result. You can try changing `cfg_scale` together.
 
 Modify the parameters in `configs/inference/inference.yaml` to specify the audio and image files you want to use, as well as switch between models. The inference results will be saved in `opts/joyhallo`. The parameters in `inference.yaml` are explained as follows:
 
