@@ -157,7 +157,7 @@ git clone https://huggingface.co/jdh-algo/JoyHallo-v1 pretrained_models/joyhallo
 sh joyhallo-infer.sh
 ```
 
-**温馨提醒**：如果想提高推理速度，可以将 `configs/inference/inference.yaml` 中的 `inference_steps` 从 **40** 改为 **1****5**，这样效率会立竿见影。你也可以进一步降低，但结果会更差。你可以尝试同时更改 `cfg_scale`。
+**温馨提醒**：如果想提高推理速度，可以将 `configs/inference/inference.yaml` 中的 `inference_steps` 从 **40** 改为 **15**，这样效率会立竿见影。你也可以进一步降低，但结果会更差。你可以尝试同时更改 `cfg_scale`。
 
 修改 `configs/inference/inference.yaml` 中的参数为你想使用的音频和图像，以及切换模型，推理结果保存在 `opts/joyhallo`，`inference.yaml` 参数说明:
 
