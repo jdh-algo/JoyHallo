@@ -272,7 +272,8 @@ def log_validation(
     imageproj = ori_net.imageproj
     audioproj = ori_net.audioproj
 
-    generator = torch.manual_seed(42)
+    # generator = torch.manual_seed(42)
+    generator = torch.cuda.manual_seed_all(42) # use cuda random seed
     tmp_denoising_unet = copy.deepcopy(denoising_unet)
 
     pipeline = FaceAnimatePipeline(

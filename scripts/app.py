@@ -344,7 +344,8 @@ def inference(cfg, image_processor, audio_processor, pipeline, audioproj, save_d
 
     times = audio_emb.shape[0] // clip_length
     tensor_result = []
-    generator = torch.manual_seed(42)
+    # generator = torch.manual_seed(42)
+    generator = torch.cuda.manual_seed_all(42) # use cuda random seed
     for t in range(times):
         print(f"[{t+1}/{times}]")
 
