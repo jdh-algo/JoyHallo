@@ -145,7 +145,8 @@ The final `pretrained_models` directory should look like this:
 - Use `wav` format.
 - Mandarin, English or mixed, with clear audio and suitable background music.
 
-**Note**: These requirements apply to **both training and inference processes**.
+> [!IMPORTANT]
+> These requirements apply to **both training and inference processes**.
 
 ## 🚀 Inference
 
@@ -157,7 +158,8 @@ Use the following command to perform inference:
 sh joyhallo-infer.sh
 ```
 
-**Kindly remind**: If you want to improve the inference speed, you can change the `inference_steps` from **40** to **15** in `configs/inference/inference.yaml`. That will enhance the efficiency immediately. You can decrease that even more, but you may get a worse result. You can try changing `cfg_scale` together.
+> [!TIP]
+> If you want to improve the inference speed, you can change the `inference_steps` from **40** to **15** in `configs/inference/inference.yaml`. That will enhance the efficiency immediately. You can decrease that even more, but you may get a worse result. You can try changing `cfg_scale` together.
 
 Modify the parameters in `configs/inference/inference.yaml` to specify the audio and image files you want to use, as well as switch between models. The inference results will be saved in `opts/joyhallo`. The parameters in `inference.yaml` are explained as follows:
 
@@ -222,7 +224,8 @@ python scripts/extract_meta_info_stage1.py -r jdh-Hallo -n jdh-Hallo
 python scripts/extract_meta_info_stage2.py -r jdh-Hallo -n jdh-Hallo
 ```
 
-**Note**: Execute steps 1 and 2 sequentially as they perform different tasks. Step 1 converts videos into frames, extracts audio from each video, and generates the necessary masks. Step 2 generates face embeddings using InsightFace and audio embeddings using Chinese wav2vec2, and requires a GPU. For parallel processing, use the `-p` and `-r` arguments. The `-p` argument specifies the total number of instances to launch, dividing the data into `p` parts. The `-r` argument specifies which part the current process should handle. You need to manually launch multiple instances with different values for `-r`.
+> [!NOTE]
+> Execute steps 1 and 2 sequentially as they perform different tasks. Step 1 converts videos into frames, extracts audio from each video, and generates the necessary masks. Step 2 generates face embeddings using InsightFace and audio embeddings using Chinese wav2vec2, and requires a GPU. For parallel processing, use the `-p` and `-r` arguments. The `-p` argument specifies the total number of instances to launch, dividing the data into `p` parts. The `-r` argument specifies which part the current process should handle. You need to manually launch multiple instances with different values for `-r`.
 
 ## 💻 Comparison
 

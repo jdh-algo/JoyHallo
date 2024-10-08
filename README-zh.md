@@ -145,7 +145,8 @@ git clone https://huggingface.co/jdh-algo/JoyHallo-v1 pretrained_models/joyhallo
 - 音频为 `wav`格式；
 - 中文、英语或者混合，音频尽量清晰，背景音乐适合。
 
-**注意**：这里的要求**同时针对训练过程和推理过程**。
+> [!IMPORTANT]
+> 这里的要求**同时针对训练过程和推理过程**。
 
 ## 🚀 推理
 
@@ -157,7 +158,8 @@ git clone https://huggingface.co/jdh-algo/JoyHallo-v1 pretrained_models/joyhallo
 sh joyhallo-infer.sh
 ```
 
-**温馨提醒**：如果想提高推理速度，可以将 `configs/inference/inference.yaml` 中的 `inference_steps` 从 **40** 改为 **15**，这样效率会立竿见影。你也可以进一步降低，但结果可能会变差。你可以尝试同时更改 `cfg_scale`。
+> [!TIP]
+> 如果想提高推理速度，可以将 `configs/inference/inference.yaml` 中的 `inference_steps` 从 **40** 改为 **15**，这样效率会立竿见影。你也可以进一步降低，但结果可能会变差。你可以尝试同时更改 `cfg_scale`。
 
 修改 `configs/inference/inference.yaml` 中的参数为你想使用的音频和图像，以及切换模型，推理结果保存在 `opts/joyhallo`，`inference.yaml` 参数说明:
 
@@ -222,7 +224,8 @@ python scripts/extract_meta_info_stage1.py -r jdh-Hallo -n jdh-Hallo
 python scripts/extract_meta_info_stage2.py -r jdh-Hallo -n jdh-Hallo
 ```
 
-**注意**：按照顺序执行步骤1和步骤2，因为它们执行不同的任务。步骤1将视频转换为帧，提取每个视频的音频，并生成必要的掩码。步骤2使用InsightFace生成面部嵌入，并使用Chinese wav2vec2生成音频嵌入，需要GPU来加速处理。对于并行处理，可以使用`-p`和`-r`参数。`-p`参数指定要启动的实例总数，数据将被分成`p`份。`-r`参数指定当前进程应该处理的哪一部分。需要手动启动多个实例，每个实例的`-r`参数值不同。
+> [!NOTE]
+> 按照顺序执行步骤1和步骤2，因为它们执行不同的任务。步骤1将视频转换为帧，提取每个视频的音频，并生成必要的掩码。步骤2使用InsightFace生成面部嵌入，并使用Chinese wav2vec2生成音频嵌入，需要GPU来加速处理。对于并行处理，可以使用`-p`和`-r`参数。`-p`参数指定要启动的实例总数，数据将被分成`p`份。`-r`参数指定当前进程应该处理的哪一部分。需要手动启动多个实例，每个实例的`-r`参数值不同。
 
 ## 💻 模型对比
 
