@@ -13,6 +13,10 @@
 
 In audio-driven video generation, creating Mandarin videos presents significant challenges. Collecting comprehensive Mandarin datasets is difficult, and the complex lip movements in Mandarin further complicate model training compared to English. In this study, we collected 29 hours of Mandarin speech video from JD Health International Inc. employees, resulting in the jdh-Hallo dataset. This dataset includes a diverse range of ages and speaking styles, encompassing both conversational and specialized medical topics. To adapt the JoyHallo model for Mandarin, we employed the Chinese wav2vec2 model for audio feature embedding. A semi-decoupled structure is proposed to capture inter-feature relationships among lip, expression, and pose features. This integration not only improves information utilization efficiency but also accelerates inference speed by 14.3%. Notably, JoyHallo maintains its strong ability to generate English videos, demonstrating excellent cross-language generation capabilities.
 
+## 📰 News
+
+- 2024/11/19: 🎉🎉🎉 We are proud to introduce our brand new model JoyVASA. It is lighter and faster than other generative models. Here is the [HomePage](https://jdh-algo.github.io/JoyVASA/).
+
 ## 🎬 Videos-Mandarin-Woman
 
 https://github.com/user-attachments/assets/389e053f-e0c4-433c-8c60-80f9181d3f9c
