@@ -1,7 +1,18 @@
-# JoyHallo: Digital human model for Mandarin
+<h1 align='center'>JoyHallo: Digital human model for Mandarin</h1>
+
+<div align='center'>
+    <a href='https://github.com/DBDXSS' target='_blank'>Sheng Shi</a> 
+    <a href='https://github.com/xuyangcao' target='_blank'>Xuyang Cao</a> 
+    <a href='https://github.com/zhaojun060708' target='_blank'>Jun Zhao</a> 
+    Guoxin Wang
+</div>
+<div align='center'>
+    JD Health International Inc.
+</div>
 
 <br>
-<div align='left'>
+<div align='center'>
+    <a href='https://github.com/jdh-algo/JoyHallo'><img src='https://img.shields.io/github/stars/jdh-algo/JoyHallo?style=social'></a>
     <a href='https://jdh-algo.github.io/JoyHallo'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href='https://arxiv.org/pdf/2409.13268'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
     <a href='https://huggingface.co/jdh-algo/JoyHallo-v1'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow'></a>
